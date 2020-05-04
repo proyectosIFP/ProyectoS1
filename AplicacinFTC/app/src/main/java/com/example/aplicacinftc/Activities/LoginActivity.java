@@ -42,6 +42,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private Button buttonLogin;
     private Button buttonRegister;
+    private Button buttonResetear;
 
     //EMPLEADO INICIADO
     private String emailIniciado = "";
@@ -100,6 +101,16 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
+                finish();
+            }
+        });
+
+        buttonResetear = (Button) findViewById(R.id.buttonResetearLlamar);
+
+        buttonResetear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this, RecuperarActivity.class));
                 finish();
             }
         });
@@ -166,7 +177,6 @@ public class LoginActivity extends AppCompatActivity {
                     emailIniciado = dataSnapshot.child("email").getValue().toString();
                     nombre = dataSnapshot.child("nombre").getValue().toString();
                     apellidos = dataSnapshot.child("apellidos").getValue().toString();
-                    contraseña = dataSnapshot.child("contraseña").getValue().toString();
                     edad = dataSnapshot.child("edad").getValue().toString();
                     foto = dataSnapshot.child("foto").getValue().toString();
                     recordar = dataSnapshot.child("recordar").getValue().toString();
@@ -174,7 +184,7 @@ public class LoginActivity extends AppCompatActivity {
                     FirebaseUser user = mAuth.getCurrentUser();
                     String id = mAuth.getCurrentUser().getUid();
 
-                    GlobalInfo.UsuarioIniciado = new User(emailIniciado, nombre, apellidos, contraseña, edad, foto, recordar);
+                    GlobalInfo.UsuarioIniciado = new User(emailIniciado, nombre, apellidos, edad, foto, recordar);
 
                     if (entrar){
                         //SI YA HAY USUARIO PASAS DIRECTAMENTE AL MAIN

@@ -176,7 +176,7 @@ public class RegisterActivity extends AppCompatActivity {
                     //GUARDAMOS LA ID DEL USUARIO CREADO
                     String id = mAuth.getCurrentUser().getUid();
                     //CREAMOS OBJETO PARA PASARSELO A LA BASE
-                    User user = new User(email, nombre, apellidos, edad, contraseña, stringFoto, recordar);
+                    User user = new User(email, nombre, apellidos, edad, stringFoto, recordar);
                     //ENTRAMOS DONDE LOS USUARIOS Y LE METEMOS EL OBJETO LUEGO HAY VALIDACIONES
                     mDataBase.child("Users").child(id).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                         //COMIENZO VALIDACIONES

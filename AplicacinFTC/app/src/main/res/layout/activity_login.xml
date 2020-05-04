@@ -15,8 +15,8 @@
         android:id="@+id/linearLogin"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:background="#72AEAEAE"
+        android:gravity="center"
         android:orientation="vertical"
         android:padding="20dp">
 
@@ -40,7 +40,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-
             android:text="Recordar" />
 
         <Button
@@ -53,29 +52,38 @@
             android:textColor="@android:color/white" />
 
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_marginTop="10dp"
-                android:text="- o -" />
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:orientation="vertical">
-
-        <Button
-            android:id="@+id/buttonRegisterUserLlamar"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
-            android:background="@color/colorAccent"
-            android:text="REGISTRARME"
-            android:textColor="@android:color/white" />
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="- o -" />
 
-    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/buttonRegisterUserLlamar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:background="@color/colorAccent"
+                android:text="REGISTRARME"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonResetearLlamar"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Has olvidado tu contraseña?"
+            android:textColor="#26C6CC"
+            android:textSize="10sp" />
 
 
     </LinearLayout>

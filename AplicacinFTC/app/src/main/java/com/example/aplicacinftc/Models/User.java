@@ -6,16 +6,14 @@ public class User {
     private String apellidos;
     private String email;
     private String edad;
-    private String contraseña;
     private String foto;
     private String recordar;
 
-    public User(String nombre, String apellidos, String email, String edad, String contraseña, String foto, String recordar) {
+    public User(String nombre, String apellidos, String email, String edad, String foto, String recordar) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.email = email;
         this.edad = edad;
-        this.contraseña = contraseña;
         this.foto = foto;
         this.recordar = recordar;
     }
@@ -50,14 +48,6 @@ public class User {
 
     public void setEdad(String edad) {
         this.edad = edad;
-    }
-
-    public String getContraseña() {
-        return contraseña;
-    }
-
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
     }
 
     public String getFoto() {

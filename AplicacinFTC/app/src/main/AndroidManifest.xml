@@ -11,21 +11,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".Activities.SplashActivity"
+        <activity
+            android:name=".Activities.SplashActivity"
             android:screenOrientation="locked">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activities.MainActivity"
-            android:screenOrientation="locked"/>
-        <activity android:name=".Activities.LoginActivity"
-            android:screenOrientation="locked"/>
-        <activity android:name=".Activities.RegisterActivity"
-            android:screenOrientation="locked"/>
+        <activity
+            android:name=".Activities.LoginActivity"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".Activities.MainActivity"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".Activities.RegisterActivity"
+            android:screenOrientation="locked"
+            android:parentActivityName=".Activities.LoginActivity">
+        </activity>
+        <activity android:name=".Activities.RecuperarActivity"
+            android:screenOrientation="locked"
+            android:parentActivityName=".Activities.LoginActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.LoginActivity" />
+        </activity>
     </application>
 
 </manifest>
